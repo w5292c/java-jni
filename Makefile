@@ -6,5 +6,8 @@ native-lib:
 java-app:
 	javac HelloJNI.java
 
+clean:
+	@rm -f HelloJNI.class libhello.so
+
 test: all
 	java -Djava.library.path=`pwd` HelloJNI
